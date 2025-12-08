@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    a{
+      text-decoration: none;
+    }
+    #bu{
+      height: 50px;
+      width: 50px;
+      color: green;
+      text-decoration: none;
+    }
+    #d{
+      pointer-events: none;
+      /* cursor: default; */
+      /* display: none; */
+    }
+  </style>
+</head>
+<body>
+  <!-- <button id="bu"> -->
+    <!-- <a href="google.com">Link</a> -->
+  <!-- </button> -->
+  <button  id="d">Show Nepal</button>
+  <button id="a">This button is unclickable.</button>
+  <script>
+    let aa=document.getElementById('a');
+    aa.disabled=true;
+    
+        let imgButton = document.getElementById("Poster")
+      imgButton.setAttribute("src", convertToJson.Poster)
+      imgButton.setAttribute("alt", convertToJson.Title)
+
+      let createTitle = document.getElementById("Title")
+      createTitle.innerHTML += `Title: ${convertToJson.Title}`;
+
+
+      let createId = document.createElement("div")
+      createId.setAttribute("id", "imdbID")
+      createId.innerText = `IMDB ID: ${convertToJson.imdbID}`;
+
+
+      let createYear = document.createElement("div")
+      createYear.setAttribute("id", "releaseYear")
+      createYear.innerText = `Release Year: ${convertToJson.Year}`;
+
+
+      let movieOrSeries = document.createElement("p")
+      movieOrSeries.innerText = convertToJson.Type;
+
+
+
+      let ratedMovie=document.createElement("div")
+      ratedMovie.setAttribute("id", "rated")  
+      ratedMovie.innerHTML=`Rated: ${convertToJson.Rated}`
+      
+
+  </script>
+</body>
+
+</html>
